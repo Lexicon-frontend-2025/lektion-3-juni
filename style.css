@@ -1,0 +1,83 @@
+/* resets mha :where */
+/* istället för
+header h2,
+article h2,
+main h2 {
+    margin: 0
+*/
+:where(header, main, article) h2 {
+    margin: 0;
+    color: blue;
+    font-size: 1.2rem;
+}
+
+/* referera till ID: '#id-namn' */
+body>header {
+    height: 20vh;
+    background-color: teal;
+}
+
+h1 {
+    color: white;
+}
+
+/* hover-effekt */
+ol li:has(a:hover) {
+    color: aquamarine;
+    cursor: pointer;
+}
+
+/* active */
+ol li a:active {
+    color: hotpink;
+}
+
+/* focus */
+input:focus {
+    border-color: hotpink;
+}
+
+/* focus-visible */
+input:focus-visible {
+    border-color: teal;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.205);
+}
+
+/* referera till klasser: '.klassnamn' */
+.concept-card {
+    border: 14px solid rgb(0, 91, 91);
+    padding: 2rem;
+
+    img {
+        width: 300px;
+    }
+
+    .concept-card__title {
+        font-size: 1.5rem;
+        color: rgb(0, 36, 36);
+    }
+
+    .concept-card__list {
+        list-style-type: square;
+
+        &.concept-card--subcategory {
+            border: 4px solid hotpink;
+        }
+    }
+}
+
+.concept-card:has(img) {
+    border: 14px solid rgb(193, 93, 208);
+    padding: 1rem;
+}
+
+/* :is */
+article :is(ul, ol) {
+    list-style-type: none;
+}
+
+/* article ul,
+article ol {
+    list-style-type: none;
+} */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS-fördjupning</title>
+</head>
+
+<body>
+    <header>
+        <h1>Nedan testar vi alla koncept vi går igenom:</h1>
+    </header>
+    <main>
+        <h2>Koncept som kommer att gås igenom:</h2>
+        <ol>
+            <li><a>Klasser och ID:n</a></li>
+            <li><a>Nestad CSS</a></li>
+            <li><a>BEM</a></li>
+        </ol>
+        <input>
+        <article class="concept-card">
+            <h2 class="concept-card__title">Klasser och ID:n</h2>
+            <ul class="concept-card__list">
+                <li>Använd klasser när flera element delar samma utseende</li>
+                <li class="warning-text">Använd ID:n med stor eftertanke</li>
+            </ul>
+            <ol>
+                <li>Tomt listelement</li>
+            </ol>
+        </article>
+        <article class="concept-card">
+            <h2 class="concept-card__title">Nestad CSS</h2>
+            <ul class="concept-card__list">
+                <li>Strukturera din CSS som HTML</li>
+                <li>För att hålla CSS mer logiskt och organiserat</li>
+            </ul>
+            <ol>
+                <li>Tomt listelement</li>
+            </ol>
+        </article>
+        <article class="concept-card">
+            <img src="https://images.unsplash.com/photo-1748615745871-7172b3d2a7cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+                alt="blue orchid" width="100" height="100">
+            <h2 class="concept-card__title">BEM</h2>
+            <ul class="concept-card__list">
+                <li>Ett sätt att skriva strukturerad och tydlig CSS</li>
+                <li>Varje del av komponenten får ett eget namn</li>
+                <li>Bättre översikt i större projekt</li>
+                <li>Förenklar namngivning</li>
+            </ul>
+        </article>
+        <article class="concept-card">
+            <h2 class="concept-card__title">Avancerade selektorer</h2>
+            <ul class="concept-card__list concept-card--subcategory">
+                <li>& - referens till dig själv</li>
+                <li>:is() - en funktionell pseudo-klass; flera alternativ, en stil</li>
+                <li>:where() - bra för resets eller generella regler</li>
+                <li>:has() - "Om mitt barn är detta - styleas jag om"</li>
+            </ul>
+        </article>
+                <article class="concept-card">
+            <h2 class="concept-card__title">Specificitet</h2>
+            <ul class="concept-card__list concept-card--subcategory">
+                <li>Element - 1p</li>
+                <li>Klass - 10p</li>
+                <li>Id: 100p</li>
+                <li>Inline: 1000p</li>
+            </ul>
+        </article>
+        <article class="concept-card">
+            <h2 class="concept-card__title">Pseudo-element</h2>
+            <ul class="concept-card__list concept-card--subcategory">
+                <li>:hover - när muspekaren är över elementet</li>
+                <li>:active - när du klickar ner musknappen</li>
+                <li>:focus - när ett element är fokuserat (t.ex input)</li>
+                <li>:focus-visible - fokus endast när det är relevant för tillgänglighet</li>
+            </ul>
+        </article>
+    </main>
+</body>
+
+</html>
