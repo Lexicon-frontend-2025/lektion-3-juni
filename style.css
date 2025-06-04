@@ -1,3 +1,28 @@
+/* skapa färgvariabel */
+:root {
+    --body-bg: white;
+    --bg-primary: rgba(0, 0, 0, 0.2);
+    --bg-secondary: rgb(107, 77, 166);
+    --clr-primary: #020202;
+    --clr-secondary: rgb(55, 55, 140);
+    --clr-warning: rgb(130, 55, 90);
+}
+
+[data-theme="light"] {
+    --body-bg: white;
+    --clr-text: black;
+}
+
+[data-theme="dark"] {
+    --body-bg: black;
+    --clr-text: white;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--clr-text);
+}
+
 /* resets mha :where */
 /* istället för
 header h2,
@@ -7,14 +32,14 @@ main h2 {
 */
 :where(header, main, article) h2 {
     margin: 0;
-    color: blue;
+    color: var(--clr-secondary);
     font-size: 1.2rem;
 }
 
 /* referera till ID: '#id-namn' */
 body>header {
     height: 20vh;
-    background-color: teal;
+    background-color: hsl(from teal h s calc(l + 10));
 }
 
 h1 {
@@ -41,12 +66,12 @@ input:focus {
 input:focus-visible {
     border-color: teal;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.205);
+    box-shadow: 0 0 0 3px var(--bg-primary);
 }
 
 /* referera till klasser: '.klassnamn' */
 .concept-card {
-    border: 14px solid rgb(0, 91, 91);
+    border: 14px solid var(--bg-secondary);
     padding: 2rem;
 
     img {
